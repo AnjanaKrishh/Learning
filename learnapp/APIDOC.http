@@ -1,0 +1,35 @@
+###
+GET http://127.0.0.1:8000/learnapp/courses/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/learnapp/courses/
+Content-Type: application/json
+
+{
+    "course_name": "Python Full Stack Development",
+    "description": "Learn Python, Django and React",
+    "instructor": "John",
+    "duration": "6 Months",
+    "fee": "15000.00",
+    "is_active": true
+}
+
+###
+GET http://127.0.0.1:8000/learnapp/courses/<int:pk>/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/learnapp/enrollments
+Content-Content-Type: application/json
+
+{
+    "course": 1,
+    "student_name": "Alice",
+    "email": "alice@example.com"
+}
+
+###
+GET http://127.0.0.1:8000/learnapp/enrollments/
+Accept: application/json
